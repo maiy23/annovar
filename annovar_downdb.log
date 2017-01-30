@@ -1,0 +1,65 @@
+ANNOVAR Version:
+	$LastChangedDate: 2013-05-20 11:32:41 -0700 (Mon, 20 May 2013) $
+ANNOVAR Information:
+	For questions, comments, documentation, bug reports and program update, please visit http://www.openbioinformatics.org/annovar/
+ANNOVAR Command:
+	/users/abcc/vuonghm/scripts.dir/annovar_ln/annovar_2014/annovar/annotate_variation.pl -downdb -buildver hg19 -webfrom annovar cg46 .
+ANNOVAR Started:
+	Thu Dec 10 11:50:51 2015
+NOTICE: Web-based checking to see whether ANNOVAR new version is available ... Done
+----------------------------UPDATE AVAILABLE------------------------------
+--------------------------------------------------------------------------
+WARNING: A new version of ANNOVAR (dated 2015-06-17) is available!
+         Download from http://www.openbioinformatics.org/annovar/
+Changes made in the 2015-06-17 version:
+         * improve convert2annovar to handle CASAVA format better
+         * enable convert2annovar to handle ANNOVAR to VCF conversion for specific input files
+         * improve backward compatibility of table_annovar.pl for ljb* and popfreq* databases
+         * add avdblist keyword to list all databases provided by '-webfrom annovar'
+         * add tilde expansion for annotate_variation.pl
+         * fix bug in convert2annovar to handle gz files
+         * add ability to handle vcf.gz file for table_annovar
+         * change exit code for failure to downdb in annotate_variation
+         * improve variants_reduction.pl to handle more genome builds
+         * change FASTA line to indicate mutation position in coding_change.pl
+         * fix exon count bug for splice variant on negative strand
+         * improve compatibility for certain plant genomes
+Changes made in the 2015-03-22 version:
+         * fix a bug with -score_threshold does not work with ljb2* databases
+         * added -poscolumn argument to fine-tune region-based annotation
+         * convert2annovar.pl can now handle PATH automatically and better predicts depth coverage in VCF file
+         * handle situations where a variant disrupt both ncRNA_exonic and splice site in gene-based annotation
+         * slight change in retrieve_seq_from_fasta.pl to increase compatibility for certain species
+         * improve table_annovar.pl to print out all columns for exac03 and other databases
+         * fixed a bug in coding_change.pl to handle c.dup identifiers
+Changes made in the 2014-11-12 version:
+         * fixed a problem of convert2annovar with some NR records in VCF file
+         * fixed a bug in handling dup variants in coding_change.pl
+         * improved the ability to handle VCF file in table_annovar.pl
+         * significantly reduce memory usage for filter annotation
+         * improve compatibility for unconventional chromosome names for species such as tomato
+         * fixed a problem in annotating against multi-allelic indels in VCF file
+         * fixed a problem in exon numbering for splice variants in reverse strand
+         * refGene version file included in -downdb
+Changes made in the 2014-07-14 version:
+         * table_annovar now supports -tempdir argument
+         * table_annovar now supports VCF input format and write to output VCF file
+         * table_annovar now use separate column for splicing/UTR notations
+         * convert2annovar can generate all possible SNVs/indels in a genomic region or in a transcript
+         * convert2annovar can generate ANNOVAR input files for list of dbSNP identifiers
+         * improve convert2annovar to better handle block indel/substitution in VCF4
+         * changed 'stopgain SNV' and 'stoploss SNV' to 'stopgain' and 'stoploss' as they apply to both SNVs and indels
+         * add -withfilter argument to convert2annovar to print out FILTER field in output for VCF files
+         * fixed bug to handle VCFdbfile when AF record is in scientific notation
+         * add UTR cdot annotation
+         * improved table_annovar to print out correct column headers when the database file has the information
+         * fixed a convert2annovar bug when VCF file does not have valid VCF header but -includeinfo is specified
+         * add details for splicing variant when -separate flag is used
+         * minor bug fix for dup annotation for insertions in negative strand
+         * minor change to default parameters in table_annovar.pl for ljb2_pp2
+         * fixed an error in convert2annovar to handle multi-sample VCF files
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_cg46.txt.gz ... Failed
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_cg46.txt.idx.gz ... Failed
+WARNING: Some files cannot be downloaded, including http://www.openbioinformatics.org/annovar/download/hg19_cg46.txt.idx.gz, http://www.openbioinformatics.org/annovar/download/hg19_cg46.txt.gz

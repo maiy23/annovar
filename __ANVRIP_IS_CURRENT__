@@ -1,0 +1,7 @@
+NOte to all developers!!!! 
+annovar_qsub_wrprIP.pl and annotate_variation_ABCC2IP.pl are the current and most recent versions used for AVIA prod site!!!!
+
+If you want to change this, you have to change the processing_wrapper_fdi.pl script in the AVIA webserver directory under:
+/mnt/webrepo/fr-s-bsg-avia-p/public/scripts/
+
+--hv 20151208

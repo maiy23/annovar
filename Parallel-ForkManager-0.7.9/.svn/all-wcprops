@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/annovar/!svn/ver/1/Parallel-ForkManager-0.7.9
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/annovar/!svn/ver/1/Parallel-ForkManager-0.7.9/TODO
+END
+MANIFEST
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/annovar/!svn/ver/1/Parallel-ForkManager-0.7.9/MANIFEST
+END
+META.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/annovar/!svn/ver/1/Parallel-ForkManager-0.7.9/META.yml
+END
+Makefile.PL
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/annovar/!svn/ver/1/Parallel-ForkManager-0.7.9/Makefile.PL
+END
+Changes
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/annovar/!svn/ver/1/Parallel-ForkManager-0.7.9/Changes
+END
+test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/annovar/!svn/ver/1/Parallel-ForkManager-0.7.9/test.pl
+END

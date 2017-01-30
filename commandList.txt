@@ -1,0 +1,7 @@
+hg19_FunSeq.txt	perl BIN/smart_wrpr.pl -t funseq -a FOLDERNAME -f INPUTFN -V
+hg19_FlankingSequence	BIN/../annofetch3 INPUTFN 20 OUTNAME.hg19_FlankingSequence 
+*Encode*	perl BIN/smart_wrpr.pl -o '-b DBNAME' -t intersectBed -a FOLDERNAME -f INPUTFN -V
+hg19_uniprot.txt	perl BIN/smart_wrpr.pl -t uniprot -a FOLDERNAME -f INPUTFN -O OUTNAME -V
+hg19_FunSeq2.txt	perl BIN/smart_wrpr.pl -t funseq2 -a FOLDERNAME -f INPUTFN -V 
+sift4G	perl BIN/sift4G_wrpr.pl -i INPUTFN -a FOLDERNAME
+mm10_provean.txt	perl BIN/provean_wrpr.pl -i INPUTFN -a FOLDERNAME

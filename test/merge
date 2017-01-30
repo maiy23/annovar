@@ -1,0 +1,5 @@
+< use vars qw($opt_E $opt_R $opt_A $opt_w $opt_z $opt_F $opt_x $opt_m $opt_H $opt_f $opt_a $opt_o $opt_i $opt_d $opt_T  $opt_h $opt_t $opt_c $opt_g $opt_n $opt_l $opt_b $opt_B $opt_k $opt_r $opt_s $opt_N $opt_v $opt_S $opt_p);^M
+<  getopts("f:o:c:d:i:T:t:l:B:k:p:m:F:A:rvRzsbcaehxgnHEINSw");^M
+---
+> use vars qw($opt_G $opt_w $opt_z $opt_F $opt_x $opt_m $opt_H $opt_f $opt_a $opt_o $opt_i $opt_d $opt_T  $opt_h $opt_t $opt_c $opt_g $opt_n $opt_l $opt_b $opt_B $opt_k $opt_r $opt_s $opt_N $opt_v $opt_S $opt_p);^M
+>  getopts("f:o:c:d:i:T:t:l:B:k:p:m:F:G:rvzsbcaehxgnHINSw");^M

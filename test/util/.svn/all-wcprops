@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/annovar/!svn/ver/4/util
+END
+find_and_predict_NMD_indels.pl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/annovar/!svn/ver/4/util/find_and_predict_NMD_indels.pl
+END
+annofetch
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/annovar/!svn/ver/4/util/annofetch
+END
+annofetch.f
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/annovar/!svn/ver/4/util/annofetch.f
+END
+runTumorNormalDirectoryANVR.pl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/annovar/!svn/ver/4/util/runTumorNormalDirectoryANVR.pl
+END
+sift_wrpr_mysql_with_predictions_batch.pl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/annovar/!svn/ver/4/util/sift_wrpr_mysql_with_predictions_batch.pl
+END

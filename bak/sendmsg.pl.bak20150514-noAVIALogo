@@ -1,0 +1,73 @@
+#!/usr/local/bin/perl
+=head v2.0
+This version is uses the fact the website accepts gzip, bzip, tar, tgz file formats for upload
+So we must sanitize the inputs before moving to our work directory  (for ia_upload_only)
+No longer accepts lmt inputs for checks!
+
+v3.0
+addition of viz options in the mix
+=cut
+use strict;
+use FindBin;
+use lib "$FindBin::Bin/";
+use lib "/bioinfoC/AVA/prod_scripts/util/perl_modules";
+use Mail::Sendmail;
+my $ADMIN="vuonghm\@mail.nih.gov";
+my $id=$ARGV[0];#e.g mirna504e2e5e6e5f8.abcc.init
+my $bin=`dirname $0`;chomp $bin;
+my $input_abcc="$bin/../complete/$id";#e.g /users/abcc/vuonghm/scripts.dir/avia/public/complete/mirna504e2e5e6e5f8.abcc.init
+if ($id=~/^\//){
+	$input_abcc=$id;
+}
+$id=~s/\.abcc(.init){0,1}//;
+$id=`basename $id`;chomp $id;my $dev='';
+if ($input_abcc=~/(fr-s-abcc-avia0|aviadev)/){
+	$dev='dev';
+}
+my $msg;my $email;my $subj;
+if ($#ARGV>=1){
+	if ($ARGV[1]==1){
+		if ($id=~/mirna/i){
+			$subj="AVIA completed $id";
+			$msg="Thank you for using AVIA.  Your id ($id) has completed processing.  Please visit our website retrieval service to get your data:\nhttp://avia$dev.abcc.ncifcrf.gov/apps/site/successful_retrieval/?id=$id\n";
+		}elsif ($id=~/setup/i){
+			$msg="Thank you for using AVIA.  In order complete your setup request, you need to click on the following link to confirm your setup configuration request:\nhttp://avia$dev.abcc.ncifcrf.gov/apps/site/setup/?id=$id";			
+			$subj="AVIA request confirmation";
+		}
+		my $email=`grep 'user.email' $input_abcc`;chomp $email;
+		$email=~s/user\.email=//g;
+		sendMsg("$subj",$msg,$email);
+	}elsif ($#ARGV>=2){
+		$email=$ARGV[0];
+		$subj=$ARGV[1];
+		$msg=$ARGV[2];
+		sendMsg("$subj",$msg,$email);		
+	}else{
+		$msg="AVIA $id has errored.  Please check $id in $bin\n";
+		$email=$ADMIN;
+		sendMsg("AVIA could not completed request:$id",$msg,$email);
+	}
+}
+sub sendMsg{
+	my $subject=shift;
+	my $msg=shift;
+	my $email_addy=shift;
+	if ($email_addy ne '' ){
+		$ADMIN.=",$email_addy";
+		
+	}
+	my  %mail = ( To  =>   "$email_addy",
+			BCC => "$ADMIN",
+            From    => 'NCI-FrederickAVIA@mail.nih.gov',
+            Subject=> "$subject",
+            Message => "\n$msg\n"
+           );
+
+  sendmail(%mail) or die $Mail::Sendmail::error;
+  if ($subject=~/error/i){
+  		print STDERR "Message sent: $msg\n";
+  		exit (1);
+  }else{
+		return;
+  }
+}

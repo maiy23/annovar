@@ -1,0 +1,2 @@
+==> /SeqIdx/annovardb/humandb/hg19_ljb26_all.txt <==
+#Chr	Start	End	Ref	Alt	SIFT_score	SIFT_pred	Polyphen2_HDIV_score	Polyphen2_HDIV_pred	Polyphen2_HVAR_score	Polyphen2_HVAR_pred	LRT_score	LRT_pred	MutationTaster_score	MutationTaster_pred	MutationAssessor_score	MutationAssessor_pred	FATHMM_score	FATHMM_pred	RadialSVM_score	RadialSVM_pred	LR_score	LR_pred	VEST3_score	CADD_raw	CADD_phred	GERP++_RS	phyloP46way_placental	phyloP100way_vertebrate	SiPhy_29way_logOdds
